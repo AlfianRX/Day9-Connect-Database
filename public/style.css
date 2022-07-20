@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+body {
+    margin: 0px;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f0efef;
+
+}
+
+/* nav */
+.contact-me a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    background-color: #1A4D2E;
+    padding: 8px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.home-link a{
+    color:#41aa37!important;
+    font-weight: 700;
+}
+
+/* profile */
+
+.mybio{
+    box-sizing: border-box;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.mybio .container{
+    flex-direction: row-reverse;
+    display: flex;
+    width: 80%;
+    border: 1px solid rgb (146,140, 140);
+    background-color: rgb(255, 255, 255);
+    padding: 45px 45px;
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 0px 0px 10px rgb(79,79,79);
+}
+
+.container.profile-section{
+    flex :40%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container.desc-section{
+    flex :50%;
+    position: relative;
+}
+
+.desc-section{
+    padding: 0px 30px;
+}
+
+.profile-box{
+    border: 1px solid rgb(185, 185, 185);
+    width: 350px;;
+    margin :auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(184, 184, 184);
+}
+
+.mycontact{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.mycontact .clink{
+    font-size: 15px;
+    color: white;
+    width: 100px;
+    background-color: #282929;
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.sns img{
+    width: 40px;
+    margin-right: 15px;
+}
+
+/* project */
+
+.myproject{
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.myproject .proj-list-head h1{
+    width: 90vw;
+    text-align: center;
+    margin-bottom: 20px;
+    justify-self:center ;
+    font-weight: 700;
+}
+
+.proj-list-item{
+    border: #cccccc solid 1px;
+    border-radius: 10px;
+    padding: auto;
+    background-color: white;
+    box-sizing: border-box;
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+ }
+
+ .proj-content h4 a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.proj-list-item .proj-image img{
+    flex: 1;
+}
+.proj-list-item .proj-image img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.blog-content{
+    flex: 2;
+}
+
+.proj-content .icon-product{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.proj-content .button-blog{
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.proj-content .button-blog #edit{
+    flex: 50%;
+    background-color: #2c2730;
+    color: white;
+    box-shadow: none;
+    border: #282929;
+    margin: 5px;
+}
+.proj-content .button-blog #delete{
+    flex: 50%;
+    background-color: #2c2730;
+    color: white;
+    box-shadow: none;
+    border: #282929;
+    margin: 5px;
+}
+
+/* project-form */
+
+div .proj-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+    width: 100vw;
+}
+
+.form-container{
+    /* background-color: #f1ffef; */
+    width: 500px;
+}
+
+
+div .form-container label{
+    font-size: 20px;
+    font-weight: 400px;
+    margin-bottom: 10px;
+}
+
+div .form-container #input-proj-title{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: #cccccc solid 1px;
+    height: 35px;
+}
+#input-title{
+    margin-bottom: 10px;
+}
+
+div .deadline{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.div .date-start{
+    flex: 50%;
+}
+
+.div .date-end{
+    flex: 50%;
+}
+
+div .deadline #input-date-start{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: #cccccc solid 1px;
+    height: 35px;
+}
+
+div .deadline #input-date-end{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: #cccccc solid 1px;
+    height: 35px;
+}
+
+.form-container #input-desc{
+    resize: none;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: #cccccc solid 1px;
+}
+
+.techno-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+}
+
+.techno-container div{
+    flex:50%;
+}
+
+
+.button-group{
+    display: flex;
+    justify-content: flex-end;
+}
+.button-group button{
+    font-size: 20px;
+    color: white;
+    background-color: #1A4D2E;
+    padding: 8px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: #a5a5a5 solid 1px;
+    margin-top: 20px;
+}
+
+/* detail-project */
+
+div .icons{
+    margin-bottom: 10px;
+}
+
+.detail-techno{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;  
+}
+
+.detail-techno div{
+    flex:50%;
+}

@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="/public/style.css"/>
+        <title>Welcome to My Hut</title>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-lg">
+            <a class="navbar-brand me-5" href="/home">
+                <img src="public/assets/alfi.png" style="height:35px" alt="logo" />
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item home-link">
+                    <a href="/home" class="nav-link" >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/project" class="nav-link">Add Project</a>
+                </li>
+                </ul>
+            </div>
+            <div class="d-flex contact-me">
+                <a href="/contact-me"> Contact Me </a>
+            </div>
+            </div>
+        </nav>
+
+        <div class="mybio">
+            <div class="container">
+                <div class="profile-section">
+                    <div class="profile-box">
+                        <img src="public/assets/Alfian.jpg" style=
+                        "width:100%;
+                        border-radius:10px 10px 0px 0px;"/>
+                        <p style="
+                        text-align: center;
+                        margin-bottom: 5px;
+                        margin-top: 15px;
+                        font-size: 25px;
+                        font-weight: 700;">
+                        Mochammad Rifqi Alfian</p>
+
+                        <p style="
+                        text-align: center;
+                        margin-top: 0px;
+                        font-weight: 600;">
+                        Fullstack Developer</p>
+                    </div>
+                </div>
+                    <div class="desc-section">
+                        <h1> Hi Welcome to my hut</h1>
+        
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+                            printer took a galley of type and scrambled it to make a type specimen book. It has survived
+                            not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+                            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+                            including versions of Lorem Ipsum.
+                        </p>
+                        <div class="sns">
+
+                            <div class="mycontact" href="#">
+                                <p class="clink">Contact</p>
+                                <p style="padding: 0px 20px; font-weight:700;">Download CV</p>
+                                <img  src="public/assets/icons/download.png" style="width: 25px;"/>
+                            </div>
+
+                            <div>
+                                    <h1 style="margin-bottom: 10px;">Found Me On</h1>
+                                    <img src="public/assets/icons/facebook.png" />
+                                    <img src="public/assets/icons/instagram.png" />
+                                    <img src="public/assets/icons/linkedin.png" />
+                                    <img src="public/assets/icons/twitter.png" />
+
+                            </div>
+                            
+                        </div>
+                    </div>
+
+            </div>
+
+        </div>
+
+        <div id=list-projects class="myproject">
+            <div class="proj-list-head">
+                <h1>MY PROJECT</h1>
+            </div>
+
+            <!-- the grid dynamic contents -->
+            {{#each project}}
+            <div class="proj-list-item">
+                <div class="proj-image">
+                    <img src="public/assets/uiux.jpg"/>
+                </div>
+                <div class="proj-content">
+                    <h4>
+                        <a href="/project/{{@index}}" target="_blank">{{this.name}}</a>
+                    </h4>
+                    <div class="detail-proj-content" style="color: grey;">
+                        durasi : {{this.deadline}}
+                    </div>
+                    <p >
+                        {{this.description}}
+                    </p>
+                    
+                    <div class="icon-product">
+                        {{#each technologies}}
+                        <i class="fa-brands fa-{{this}}"></i>
+                        {{/each}}
+                    </div>
+                    
+                    <div id="button-proj-config" class="button-blog">
+                        
+                        <a href="/edit-project/{{@index}}"
+                        id="edit" class="btn btn-success">
+                            Edit
+                        </a>
+
+                        <a href="/delete-project/{{@index}}"
+                        id="delete" class="btn btn-danger">
+                            Delete
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+            {{/each}}
+        </div>
+    </body>
+
+</html>
